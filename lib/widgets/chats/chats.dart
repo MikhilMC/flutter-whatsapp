@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_whatsapp/widgets/chats/chat_message.dart';
+import 'package:flutter_whatsapp/widgets/ui/message_format.dart';
 
 class Chats extends StatelessWidget {
   final List<Map<String, dynamic>> chats;
@@ -32,10 +32,11 @@ class Chats extends StatelessWidget {
           ),
           SliverList.separated(
             itemCount: chats.length,
-            itemBuilder: (context, index) => ChatMessage(
-              name: chats[index]['name'].toString(),
-              phoneNumber: chats[index]['phoneNumber'].toString(),
-              contactPhoto: chats[index]['contactPhoto'].toString(),
+            itemBuilder: (context, index) => MessageFormat(
+              name: chats[index]['name'] == ''
+                  ? chats[index]['phoneNumber'].toString()
+                  : chats[index]['name'].toString(),
+              photoUrl: chats[index]['contactPhoto'].toString(),
               lastMessage: chats[index]['lastMessage'].toString(),
               numberOfNewMessages: chats[index]['numberOfNewMessages'],
             ),

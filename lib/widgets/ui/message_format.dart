@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
 
-class ChatMessage extends StatelessWidget {
+class MessageFormat extends StatelessWidget {
   final String name;
-  final String phoneNumber;
-  final String contactPhoto;
+  final String photoUrl;
   final String lastMessage;
   final int numberOfNewMessages;
-  const ChatMessage({
+  const MessageFormat({
     super.key,
     required this.name,
-    required this.phoneNumber,
-    required this.contactPhoto,
+    required this.photoUrl,
     required this.lastMessage,
     required this.numberOfNewMessages,
   });
 
   @override
   Widget build(BuildContext context) {
-    double cWidth = MediaQuery.of(context).size.width * 0.78;
+    double cWidth = MediaQuery.of(context).size.width * 0.65;
     bool haveNewMessages = numberOfNewMessages > 0;
-    String formattedLastMessage = lastMessage.length > 50
-        ? "${lastMessage.substring(0, 50)}..."
+    String formattedLastMessage = lastMessage.length > 40
+        ? "${lastMessage.substring(0, 37)}..."
         : lastMessage;
 
     return SizedBox(
@@ -29,9 +27,10 @@ class ChatMessage extends StatelessWidget {
         children: [
           CircleAvatar(
             backgroundImage: NetworkImage(
-              contactPhoto,
+              photoUrl,
               scale: 1.0,
             ),
+            radius: 40,
           ),
           const SizedBox(
             width: 10,
@@ -45,7 +44,7 @@ class ChatMessage extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  name != "" ? name : phoneNumber,
+                  name,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
