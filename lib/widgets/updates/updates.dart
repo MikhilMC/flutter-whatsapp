@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_whatsapp/views/channel_list.dart';
 import 'package:flutter_whatsapp/widgets/ui/message_format.dart';
-import 'package:flutter_whatsapp/widgets/updates/status_view.dart';
+import 'package:flutter_whatsapp/widgets/updates/status_section.dart';
 
 class Updates extends StatelessWidget {
   final List<String> statusProfilePictures;
@@ -16,25 +16,25 @@ class Updates extends StatelessWidget {
         {
           'channelName': 'Daily Life Hacks',
           'channelPhoto':
-              'https://dummyimage.com/300x300/1fbe78/2fda1f?text=D+L+H',
+              'https://dummyimage.com/300x300/1fbe78/ffffff?text=D+L+H',
           'numberOfFollowers': 20500,
         },
         {
           'channelName': 'Travel Diaries',
           'channelPhoto':
-              'https://dummyimage.com/300x300/de52a2/6526c5?text=T+D',
+              'https://dummyimage.com/300x300/de52a2/ffffff?text=T+D',
           'numberOfFollowers': 27000,
         },
         {
           'channelName': 'Foodie Paradise',
           'channelPhoto':
-              'https://dummyimage.com/300x300/d354a3/72a577?text=F+P',
+              'https://dummyimage.com/300x300/d354a3/ffffff?text=F+P',
           'numberOfFollowers': 31000,
         },
         {
           'channelName': 'Photography Enthusiasts',
           'channelPhoto':
-              'https://dummyimage.com/300x300/6c3b42/2800f7?text=P+E',
+              'https://dummyimage.com/300x300/6c3b42/ffffff?text=P+E',
           'numberOfFollowers': 24500,
         },
       ],
@@ -46,25 +46,25 @@ class Updates extends StatelessWidget {
         {
           'channelName': 'Tech World Updates',
           'channelPhoto':
-              'https://dummyimage.com/300x300/5b3193/e272fd?text=T+W+U',
+              'https://dummyimage.com/300x300/5b3193/ffffff?text=T+W+U',
           'numberOfFollowers': 24000,
         },
         {
           'channelName': 'Gadget News',
           'channelPhoto':
-              'https://dummyimage.com/300x300/0b5fb3/736845?text=G+N',
+              'https://dummyimage.com/300x300/0b5fb3/ffffff?text=G+N',
           'numberOfFollowers': 18000,
         },
         {
           'channelName': 'Cybersecurity Tips',
           'channelPhoto':
-              'https://dummyimage.com/300x300/9987d1/36343d?text=C+T',
+              'https://dummyimage.com/300x300/9987d1/ffffff?text=C+T',
           'numberOfFollowers': 32000,
         },
         {
           'channelName': 'Code Breakers',
           'channelPhoto':
-              'https://dummyimage.com/300x300/c3a6f5/5bc3f5?text=C+B',
+              'https://dummyimage.com/300x300/c3a6f5/ffffff?text=C+B',
           'numberOfFollowers': 15000,
         },
       ],
@@ -76,25 +76,25 @@ class Updates extends StatelessWidget {
         {
           'channelName': 'Yoga & Wellness',
           'channelPhoto':
-              'https://dummyimage.com/300x300/c86ede/519d10?text=Y+%26+W',
+              'https://dummyimage.com/300x300/c86ede/ffffff?text=Y+%26+W',
           'numberOfFollowers': 21000,
         },
         {
           'channelName': 'Home Workout Plans',
           'channelPhoto':
-              'https://dummyimage.com/300x300/c9e005/42b3a2?text=H+W+P',
+              'https://dummyimage.com/300x300/c9e005/ffffff?text=H+W+P',
           'numberOfFollowers': 12500,
         },
         {
           'channelName': 'Nutrition Guide',
           'channelPhoto':
-              'https://dummyimage.com/300x300/6a6389/960c06?text=N+G',
+              'https://dummyimage.com/300x300/6a6389/ffffff?text=N+G',
           'numberOfFollowers': 28500,
         },
         {
           'channelName': 'Fitness Enthusiasts',
           'channelPhoto':
-              'https://dummyimage.com/300x300/d81b99/ba9171?text=F+E',
+              'https://dummyimage.com/300x300/d81b99/ffffff?text=F+E',
           'numberOfFollowers': 19000,
         },
       ],
@@ -106,25 +106,25 @@ class Updates extends StatelessWidget {
         {
           'channelName': 'Movie Mania',
           'channelPhoto':
-              'https://dummyimage.com/300x300/71b3b3/ad1dd3?text=M+M',
+              'https://dummyimage.com/300x300/71b3b3/ffffff?text=M+M',
           'numberOfFollowers': 43000,
         },
         {
           'channelName': 'Music Lovers',
           'channelPhoto':
-              'https://dummyimage.com/300x300/55e1ec/31a2e3?text=M+L',
+              'https://dummyimage.com/300x300/55e1ec/ffffff?text=M+L',
           'numberOfFollowers': 38000,
         },
         {
           'channelName': 'Celebrity Gossip',
           'channelPhoto':
-              'https://dummyimage.com/300x300/1c6172/847a4d?text=C+G',
+              'https://dummyimage.com/300x300/1c6172/ffffff?text=C+G',
           'numberOfFollowers': 27500,
         },
         {
           'channelName': 'Gaming Zone',
           'channelPhoto':
-              'https://dummyimage.com/300x300/2f63f2/63949b?text=G+Z',
+              'https://dummyimage.com/300x300/2f63f2/ffffff?text=G+Z',
           'numberOfFollowers': 33000,
         },
       ],
@@ -136,25 +136,25 @@ class Updates extends StatelessWidget {
         {
           'channelName': 'Learn Languages',
           'channelPhoto':
-              'https://dummyimage.com/300x300/655db1/59266d?text=L+L',
+              'https://dummyimage.com/300x300/655db1/ffffff?text=L+L',
           'numberOfFollowers': 15500,
         },
         {
           'channelName': 'Math Wizards',
           'channelPhoto':
-              'https://dummyimage.com/300x300/d7eeb6/1e62a0?text=M+W',
+              'https://dummyimage.com/300x300/d7eeb6/ffffff?text=M+W',
           'numberOfFollowers': 14000,
         },
         {
           'channelName': 'History Hub',
           'channelPhoto':
-              'https://dummyimage.com/300x300/65805e/982f29?text=H+H',
+              'https://dummyimage.com/300x300/65805e/ffffff?text=H+H',
           'numberOfFollowers': 22000,
         },
         {
           'channelName': 'Science Daily',
           'channelPhoto':
-              'https://dummyimage.com/300x300/e91190/6830ce?text=S+D',
+              'https://dummyimage.com/300x300/e91190/ffffff?text=S+D',
           'numberOfFollowers': 29000,
         },
       ],
@@ -189,22 +189,7 @@ class Updates extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(
-            child: SizedBox(
-              height: 140.0,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: ListView.separated(
-                  itemBuilder: (context, index) => StatusView(
-                    centerImageUrl: statusProfilePictures[index],
-                  ),
-                  separatorBuilder: (context, index) => const SizedBox(
-                    width: 15.0,
-                  ),
-                  itemCount: statusProfilePictures.length,
-                  scrollDirection: Axis.horizontal,
-                ),
-              ),
-            ),
+            child: StatusSection(statusProfilePictures: statusProfilePictures),
           ),
           const SliverToBoxAdapter(
             child: SizedBox(
