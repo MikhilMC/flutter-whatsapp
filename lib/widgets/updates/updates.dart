@@ -217,7 +217,7 @@ class Updates extends StatelessWidget {
                     ));
                   },
                   child: const SizedBox(
-                    width: 100.0,
+                    width: 110.0,
                     child: Row(
                       children: [
                         Text(

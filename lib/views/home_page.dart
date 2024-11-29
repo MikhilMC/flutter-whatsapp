@@ -15,7 +15,7 @@ enum CallType { recieved, missedCall }
 enum CallDirection { incoming, outgoing }
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   static const List<Map<String, dynamic>> chats = [
     {
@@ -173,42 +173,18 @@ class HomePage extends StatefulWidget {
       "name": "Community ${communityIndex + 1}",
       "lastMessage":
           "This is the latest message for Community ${communityIndex + 1}.",
-      "imageUrl": "https://picsum.photos/id/${random.nextInt(1000)}/200/200",
+      "imageUrl": "https://picsum.photos/id/${random.nextInt(100)}/200/200",
       "groups": List.generate(groupCount, (groupIndex) {
         return {
           "id": "${communityIndex + 1}-${groupIndex + 1}",
           "name": "Group ${groupIndex + 1}",
           "memberCount": random.nextInt(50) + 10,
           "groupImage":
-              "https://picsum.photos/id/${random.nextInt(1000)}/200/200",
+              "https://picsum.photos/id/${random.nextInt(100)}/200/200",
         };
       }) as List<Map<String, dynamic>>,
     };
   });
-
-  // final List<Map<String, dynamic>> callLogs = CallLogs.generateCallLog();
-
-  static const List<Map<String, dynamic>> contactNames = [
-    {"name": "Ociuz Academy", "isSaved": true},
-    {"name": "Aneena Ramakrishnan", "isSaved": false},
-    {"name": "Sai Blockchain Boutique", "isSaved": true},
-    {"name": "Faizal [GEC-IT]", "isSaved": true},
-    {"name": "24*7 USDT", "isSaved": false},
-    {"name": "Vinil", "isSaved": true},
-  ];
-
-  final List<Map<String, String?>> contacts = List.generate(
-    contactNames.length,
-    (index) {
-      return {
-        "name": contactNames[index]['name'].toString(),
-        "phone": contactNames[index]['isSaved']
-            ? null
-            : CallLogs.generatePhoneNumber(),
-        "contactPicture": "https://picsum.photos/200/300?random=${index + 1}",
-      };
-    },
-  );
 
   static const List<Map<String, String>> favourites = [
     {
@@ -291,21 +267,68 @@ class _HomePageState extends State<HomePage> {
         ),
         unselectedItemColor: const Color.fromRGBO(255, 255, 255, 0.7),
         backgroundColor: const Color.fromRGBO(11, 16, 20, 1),
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
+            icon: Container(
+                width: 45,
+                height: 25,
+                decoration: BoxDecoration(
+                  color: _selectedIndex == 0
+                      ? Colors.green.shade900
+                      : const Color.fromRGBO(11, 16, 20, 1),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                ),
+                child: const Icon(Icons.chat)),
             label: 'Chats',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.update),
+            icon: Container(
+              width: 45,
+              height: 25,
+              decoration: BoxDecoration(
+                color: _selectedIndex == 1
+                    ? Colors.green.shade900
+                    : const Color.fromRGBO(11, 16, 20, 1),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(15),
+                ),
+              ),
+              child: const Icon(Icons.update),
+            ),
             label: 'Updates',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.groups),
+            icon: Container(
+              width: 45,
+              height: 25,
+              decoration: BoxDecoration(
+                color: _selectedIndex == 2
+                    ? Colors.green.shade900
+                    : const Color.fromRGBO(11, 16, 20, 1),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(15),
+                ),
+              ),
+              child: const Icon(Icons.groups),
+            ),
             label: 'Communities',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.call),
+            icon: Container(
+              width: 45,
+              height: 25,
+              decoration: BoxDecoration(
+                color: _selectedIndex == 3
+                    ? Colors.green.shade900
+                    : const Color.fromRGBO(11, 16, 20, 1),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(15),
+                ),
+              ),
+              child: const Icon(Icons.call),
+            ),
             label: 'Calls',
           ),
         ],
